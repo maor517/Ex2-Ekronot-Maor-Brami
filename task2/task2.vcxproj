@@ -18,20 +18,12 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="Device.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="Device.cpp" />
-    <ClCompile Include="test1Device.cpp" />
-  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{44d1ea6c-bd6b-42f7-ac93-4e38be47c15b}</ProjectGuid>
-    <RootNamespace>Ex2</RootNamespace>
+    <ProjectGuid>{1f14487d-2ebf-42de-84ee-35e45c3d4bee}</ProjectGuid>
+    <RootNamespace>task2</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
-    <ProjectName>task1</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -112,6 +104,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -134,6 +127,17 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Ex2\Device.h" />
+    <ClInclude Include="..\Ex2\DeviceList.h" />
+    <ClInclude Include="..\Ex2\User.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Ex2\Device.cpp" />
+    <ClCompile Include="..\Ex2\DeviceList.cpp" />
+    <ClCompile Include="..\Ex2\test2User.cpp" />
+    <ClCompile Include="..\Ex2\User.cpp" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

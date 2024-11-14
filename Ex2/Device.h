@@ -27,7 +27,7 @@ public:
 	bool isActive() const;
 	void activate();
 	void deactivate();
-	void init(unsigned int id, DeviceType type, std::string os);
+	void init(unsigned int id, const DeviceType type, const std::string os);
 	unsigned int getID() const;
 	DeviceType getType() const;
 private:
