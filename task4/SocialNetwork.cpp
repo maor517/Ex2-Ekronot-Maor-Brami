@@ -2,6 +2,11 @@
 #include <iostream>
 #define WINDOWS "Windows"
 
+/*
+function initializes a social network
+input: networkName - the name of the network, minAge - the minimum age for the social network
+output: none
+*/
 void SocialNetwork::init(const std::string networkName, const int minAge)
 {
 	this->networkName = networkName;
@@ -9,6 +14,11 @@ void SocialNetwork::init(const std::string networkName, const int minAge)
 	this->profiles.init();
 }
 
+/*
+function clears the social network
+input: none
+output: none
+*/
 void SocialNetwork::clear()
 {
 	this->networkName = "";
@@ -16,16 +26,31 @@ void SocialNetwork::clear()
 	this->profiles.clear();
 }
 
+/*
+function returns the network name
+input: none
+output: the network name
+*/
 std::string SocialNetwork::getNetworkName() const
 {
 	return this->networkName;
 }
 
+/*
+function returns the age
+input: none
+output: the age of the network
+*/
 int SocialNetwork::getMinAge() const
 {
 	return this->age;
 }
 
+/*
+function adds a profile to the network
+input: profile_to_add - the profile that is added to the network
+output: false if the profile's is lower then the minimum age or true if it is not
+*/
 bool SocialNetwork::addProfile(const Profile profile_to_add)
 {
 	if (profile_to_add.getOwner().getAge() < this->age)
@@ -36,6 +61,11 @@ bool SocialNetwork::addProfile(const Profile profile_to_add)
 	return true;
 }
 
+/*
+function returns all of the windows devices
+input: none
+output: all of the windows devices
+*/
 std::string SocialNetwork::getWindowsDevices() const
 {
     std::string str = "";
